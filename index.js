@@ -159,4 +159,4 @@ async function LocalTest() {
   }
 }
 
-LocalTest();
+LocalTest(); // Testing, should be commented for upload on Lambda.
