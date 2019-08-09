@@ -152,10 +152,6 @@ async function LocalTest() {
     PDF2Images = require('./pdf-convert-win');
 
     await Process('input1.pdf-preview-gen', 'test.pdf', TargetBasket);
-    //await uploadS3File('C:\\GitProjects\\pdf-preview-gen\\temp\\test-1.jpg', 'output.pdf-preview-gen', 'test.jpg');
-    //await removeS3File('output.pdf-preview-gen', 'test.jpg');
-    //await insertFileInfo('C:\\GitProjects\\pdf-preview-gen\\test.pdf');
-    //await updateFileStatus('2', 'aaa');
 
     console.log('Processed.');
   } catch(err) {
