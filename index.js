@@ -6,6 +6,10 @@ const { promisify } = require("util");
 
 const TargetBasket = 'output.pdf-preview-gen';
 const DBTableName = 'pdf-previews';
+const isLocalTest = true; // for testing in local enviroment
+// Need only for local test
+const InputBasket = 'input1.pdf-preview-gen';
+const InputFile = 'test.pdf';
 
 let TempDir;
 
@@ -86,7 +90,7 @@ async function uploadS3File(SourceFile, Basket, Name) {
 }
 
 async function removeS3File(Basket, Name) {
-  if (Name === 'test.pdf') return; // Do not remove my test file (for testing)
+  if (isLocalTest) return; // Do not remove my test file (for testing)
 
   const s3 = new AWS.S3();
   const s3Params = {
@@ -151,7 +155,7 @@ async function LocalTest() {
     TempDir = './temp';
     PDF2Images = require('./pdf-convert-win');
 
-    await Process('input1.pdf-preview-gen', 'test.pdf', TargetBasket);
+    await Process(InputBasket, InputFile, TargetBasket);
 
     console.log('Processed.');
   } catch(err) {
@@ -159,4 +163,4 @@ async function LocalTest() {
   }
 }
 
-LocalTest(); // Testing, should be commented for upload on Lambda.
+if (isLocalTest) LocalTest(); // Testing, should be commented for upload on Lambda.
