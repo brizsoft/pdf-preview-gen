@@ -1,6 +1,9 @@
 <h2>Работа в Lambda</h2>
 
-User ID to connect to AWS: pdf-preview-gen-tester2
+<b>Connect to AWS</>
+URL: https://564925824098.signin.aws.amazon.com/console
+<br>
+User ID: pdf-preview-gen-tester2
 <br>
 Пароль вышлю отдельно.
 <br>
@@ -8,6 +11,10 @@ User ID to connect to AWS: pdf-preview-gen-tester2
 Input Basket: <pre>input1.pdf-preview-gen</pre>
 Output Basket: <pre>output.pdf-preview-gen</pre>
 Table in DynamoDB: <pre>pdf-previews</pre>
+Lambda function:
+<pre>
+pdf-preview-gen
+</pre>
 
 Теперь работает и на ламбде.
 Напишите, нужна ли инструкция по деплою проекта на ламбду на другой аккаунт.
