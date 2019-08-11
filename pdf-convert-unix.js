@@ -1,13 +1,13 @@
 const path = require('path');
-const { promisify } = require("util");
+//const { promisify } = require("util");
 const pdf2img = require('pdf2img-lambda-friendly');
 
 //const convert_pr = promisify(pdf2img.convert);
 function convert_pr(File) {
   return new Promise(function(resolve, reject) {
-    pdf2img.convert(PDFFile, function(err, info) {
+    pdf2img.convert(File, function(err, info) {
       if (err) reject(err); else resolve(info);
-    }
+    })
   });
 }
 
@@ -20,8 +20,8 @@ async function PDF2Images(PDFFile, TempDir) {
     outputname: path.basename(PDFFile, path.extname(PDFFile))
   });
 
-  info = await convert_pr(PDFFile);
-  console.log(info);
+  let info = await convert_pr(PDFFile);
+  //console.log(info);
 
   let res = [];
   for (let i in info.message) res.push(info.message[i].path);
