@@ -90,7 +90,7 @@ async function uploadS3File(SourceFile, Basket, Name) {
 }
 
 async function removeS3File(Basket, Name) {
-  if (isLocalTest) return; // Do not remove my test file (for testing)
+  if (Name === 'test.pdf') return; // Do not remove my test file (for testing)
 
   const s3 = new AWS.S3();
   const s3Params = {

@@ -1,6 +1,9 @@
-<b>Работа в Lambda</b>
+<h2>Работа в Lambda</h2>
 
-User ID to connect to AWS:
+User ID to connect to AWS: pdf-preview-gen-tester2
+<br>
+Пароль вышлю отдельно.
+<br>
 
 Input Basket: <pre>input1.pdf-preview-gen</pre>
 Output Basket: <pre>output.pdf-preview-gen</pre>
@@ -10,7 +13,7 @@ Table in DynamoDB: <pre>pdf-previews</pre>
 Напишите, нужна ли инструкция по деплою проекта на ламбду на другой аккаунт.
 
 
-<b>Установка для локального тестирования</b>
+<h2>Установка для локального тестирования</h2>
 
 Загрузить исходники в отдельную папку.
 Запустить в папке установку пакетов:
