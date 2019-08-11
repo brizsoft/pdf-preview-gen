@@ -2,12 +2,12 @@
 
 User ID to connect to AWS:
 
-Input Basket: input1.pdf-preview-gen
-Output Basket: output.pdf-preview-gen
-Table in DynamoDB: pdf-previews
+Input Basket: <pre>input1.pdf-preview-gen</pre>
+Output Basket: <pre>output.pdf-preview-gen</pre>
+Table in DynamoDB: <pre>pdf-previews</pre>
 
-Теперь работает.
-Напишите, нужнали инструкция по деплою проекта на ламбду на другой аккаунт.
+Теперь работает и на ламбде.
+Напишите, нужна ли инструкция по деплою проекта на ламбду на другой аккаунт.
 
 
 <b>Установка для локального тестирования</b>

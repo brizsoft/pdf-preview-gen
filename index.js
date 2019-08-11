@@ -6,7 +6,7 @@ const { promisify } = require("util");
 
 const TargetBasket = 'output.pdf-preview-gen';
 const DBTableName = 'pdf-previews';
-const isLocalTest = true; // for testing in local enviroment
+const isLocalTest = false; //true; // for testing in local enviroment set to true
 // Need only for local test
 const InputBasket = 'input1.pdf-preview-gen';
 const InputFile = 'test.pdf';
