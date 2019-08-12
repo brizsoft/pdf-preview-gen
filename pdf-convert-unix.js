@@ -25,7 +25,7 @@ async function PDF2Images(PDFFile, TempDir) {
 
   let res = [];
   for (let i in info.message) res.push(info.message[i].path);
-  console.log(res);
+  //console.log(res);
   return res;
 
 }
